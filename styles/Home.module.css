@@ -4,12 +4,72 @@
 
 .main {
   min-height: 100vh;
+  font-family: 'Varela Round', sans-serif;
   padding: 4rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.bg {
+  width:3000px;
+	height:3000px;
+  y-overflow: hidden;
+  x-overflow: hidden;
+  background-image: url(https://gnawdraw.neocities.org/imgs/spacebg.gif);
+  animation:spin 50s linear infinite;
+  position: absolute;
+  z-index: -2;
+}
+@keyframes spin{
+	from{transform:rotate(0deg)}
+	to{transform:rotate(360deg)}	
+}
+
+.main button{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border: 1px solid white;
+  cursor: pointer;
+  position: relative;
+  border-radius: 12px;
+  animation-name: floaty;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes floaty {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.ants{
+  position: relative;
+  top: -230px;
+  margin: -4vmax;   
+  filter: invert(1);
+  border-radius: 700px;
+  width: 600px;
+  height: 600px;
+  animation:spiny 10s linear infinite;
+  z-index: -1;
+}
+@keyframes spiny{
+	from{transform:rotate(0deg)}
+	to{transform:rotate(360deg)}	
 }
 
 .footer {
@@ -106,6 +166,41 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.desc{
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  width: 400px;
+  padding: 2rem;
+  border-radius: 90px;
+
+  background-image: url(https://gnawdraw.neocities.org/imgs/spacebg.gif);
+}
+
+.bugs{
+  text-align: center;
+  color: white;
+  overflow-y: scroll;
+  height: 470px;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 70px;
+  background-color: black;
+}
+
+.bugpic{
+  background-color: white;
+  border-radius: 70px;
+  border: 5px double pink;
+}
+
+/* Mobile */
+@media (max-width: 414px) {
+  .main button {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 600px) {
