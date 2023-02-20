@@ -28,7 +28,7 @@ return (
           <Link href="/bugresult">GET MY NEW LITTLE GUY</Link>
         </button>
         <div className={styles.antWrapper}>
-          <img className={styles.ants} src="/ants.png" alt="ants"/>
+          <Image className={styles.ants} src="/ants.png" alt="ants" width={100} height={100}/>
         </div>
         <div className={styles.bg}>lol</div>
       </main>
